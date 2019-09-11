@@ -1,0 +1,60 @@
+.contactUs{
+	background-image: url('https://isundei.com/wp-content/uploads/2018/01/665.jpg');
+	background-size: 100% 70%;
+	background-attachment: fixed;
+	width: 100%;
+	height: 70vh;
+}
+
+.contactSetting{
+	padding-top: 17.5%;
+	padding-left: 10%!important;
+	box-sizing: border-box;
+	position: fixed;
+	visibility: visible;
+	transition: opacity 1s;
+}
+
+.hide{
+	visibility: hidden;
+}
+
+.contactSetting h1{
+	font-size: 70px;
+	font-weight: bold;
+}
+
+.contactSetting p{
+	font-size: 20px;
+	letter-spacing: 1px;
+}
+
+.fa-home, .fa-clock, .fa-phone, .fa-envelope{
+	margin-top: 25%;
+}
+
+.rowsetting h3{
+	padding-top: 10%!important;
+	font-size: 20px;
+	font-weight: bold;
+	color: #BFA740;
+}
+
+.contactS1 .imgsetting{
+	background-color: #98BF40!important;
+	height: 100px;
+	width: 100px
+}
+
+.contactS1 .rowsetting{
+	padding: 5% 0%;
+}
+
+.rowsetting span{
+	margin-top: 5%;
+	font-size: 15px;
+}
+
+form label{
+	color: #BFA740;
+}
