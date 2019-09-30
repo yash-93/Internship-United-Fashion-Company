@@ -4,12 +4,16 @@ body{
 }
 
 .headersetting{
-	transition: 0.5s ease-out;
-	background-color: #98BF40;
+	transition: 0.5s ease;
+	background: transparent;
+}
+
+.navvisible{
+	background-color: #51636A;
 }
 
 .bgimg{
-	background-image: url('../img/backpack-blur-close-up.jpg');
+	background-image: url('../img/newww.jpg');
 	background-size: 100% 100%;
 	background-attachment: fixed;
 	width: 100%;
@@ -17,7 +21,7 @@ body{
 }
 
 .custom-toggler{
-	border-color: black;
+	border-color: #51636A;
 }
 
 li a{
@@ -41,14 +45,24 @@ li a{
 	letter-spacing: 1px
 }
 
+.headerset button{
+	border-color: #ffffff!important;
+	background: transparent!important;
+}
+
 .headerset button:hover{
-	color: black !important;
+	background-color: #fff!important;
+	color: #000000!important
 }
 
 hr{
-	background-color: #fffe7a;
-	border-color: #fffe7a;
-	color: #fffe7a;
+	background-color: #D0D0D0;
+	border-color: #D0D0D0;
+	color: #D0D0D0;
+}
+
+.customrange{
+	padding-top: 5%!important
 }
 
 .customrange h1{
@@ -67,14 +81,20 @@ hr{
 	margin: 6% 0% !important;
 }
 
+.rowsetting i{
+	color: #51636A;
+}
+
 .rowsetting p{
 	padding: 2%;
 	text-align: center;
+	color: #6c757d!important
 }
 
 .rowsetting h2{
 	font-weight: bold;
 	font-size: 20px;
+	color: #59516A
 }
 
 .imgsetting{
@@ -144,8 +164,12 @@ hr{
 	padding: 6% 6%
 }
 
+.contactform button{
+	border: none;
+}
+
 footer{
-	background-color: #98BF40;
+	background-color: #51636A;
 }
 
 #footerdiv{
@@ -168,4 +192,14 @@ footer a:hover{
 .footer-copyright a{
 	text-decoration: none;
 	color: #ffffff;
+}
+
+button{
+	background-color: #51636A!important;
+	opacity: 0.7;
+}
+
+button:hover{
+	transition: 0.5s ease;
+	opacity: 1;
 }
