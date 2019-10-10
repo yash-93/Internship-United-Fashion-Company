@@ -58,14 +58,14 @@
 
     <!-- Sidebar -->
     <ul class="sidebar navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="adminPanel.php">
+      <li class="nav-item">
+        <a class="nav-link" href="index.php">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span>
         </a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="adminBanner.php">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.php">
           <i class="fas fa-fw fa-image"></i>
           <span>Banner</span>
         </a>
@@ -78,71 +78,14 @@
         <!-- Breadcrumbs-->
         <ol class="breadcrumb">
           <li class="breadcrumb-item">
-            <a href="index.php">Dashboard</a>
+            <a href="index.php">Banner</a>
           </li>
           <li class="breadcrumb-item active">Overview</li>
         </ol>
-        <br>
-        <div class="text-center">
-          <span>Add products from here</span>&nbsp&nbsp&nbsp
-          <button name="addproduct" class="btn btn-success" data-toggle="modal" data-target="#createItemModal">Create</button>
-        </div>
-        <br><br>
 
-        <!-- DataTables Example -->
-        <div class="card mb-3">
-          <div class="card-header">
-            <i class="fas fa-table"></i>
-            Products</div>
-          <div class="card-body">
-            <div class="table-responsive">
-              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                <thead>
-                  <tr>
-                    <th>Title</th>
-                    <th>Image</th>
-                    <th>Action</th>
-                    <th></th>
-                  </tr>
-                </thead>
-                <tfoot>
-                  <tr>
-                    <th>Title</th>
-                    <th>Image</th>
-                    <th>Action</th>
-                    <th></th>
-                  </tr>
-                </tfoot>
-                <tbody>
-                  <?php
-                    $servername = "localhost";
-                    $username = "root";
-                    $password = "root";
-                    $dbname = "ufc_test";
-                    $message = "";
-                
-                    $conn = new mysqli($servername, $username, $password, $dbname);
-                
-                
-                    $sql = "SELECT * FROM products";
-                    $result = $conn->query($sql);
-                    if ($result->num_rows > 0) {
-                      while ($row = $result->fetch_assoc()) {
-                          echo "<tr>
-                                  <td>" . $row["title"] . "</td>
-                                  <td> <img src=\" " . $row["img"] . " \" style=\"height: 10vh\"></td>
-                                  <td><button name=\"remove\" onclick=\"window.location.href='adminActions.php'\" class=\"btn btn-danger\">Remove</button><br><br><button name=\"edit\" class=\"btn btn-primary\">Edit</button></td>
-                                </tr>";
-                      }
-                    }
-                  ?>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-
-      </div>
+        <!-- Change Banner -->
+        
+        
       <!-- /.container-fluid -->
 
       <!-- Sticky Footer -->
@@ -184,40 +127,6 @@
     </div>
   </div>
 
-  <!-- Create Product Modal-->
-  <div class="modal fade" id="createItemModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Fill in the details</h5>
-          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">×</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <form action="adminActions.php" method="POST">
-          <div class="form-group">
-            <div class="form-label-group">
-              <input name="productTitle" type="text" id="productTitle" class="form-control" placeholder="Title" required="required" autofocus="autofocus">
-              <label for="productTitle">Title</label>
-            </div>
-          </div>
-          <div class="form-group">
-            <div class="form-label-group">
-              <input name="productImg" type="text" id="productImg" class="form-control" placeholder="Image" required="required">
-              <label for="productImg">Image</label>
-            </div>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <input name="createItem" class="btn btn-success" type="submit"></input>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -238,4 +147,3 @@
 </body>
 
 </html>
-
