@@ -100,7 +100,7 @@
 			<h1 data-aos="zoom-in" data-aos-duration="1000">United Fashion Company is a startup based in Kolkata and having a regional office in Singapore. We are 
 			leading manufacturers and exporters of small leather goods. We customize leather wallets, belts, bags, 
 			shoes based on customer demands. We are looking to expand our business in India and European countries.</h1>
-			<button class="btn btn-outline-light btn-lg text-white" data-aos="fade-up" data-aos-duration="1000">LEARN</button>
+			<button onclick="window.location.href='contactUs.html'" class="btn btn-outline-light btn-lg text-white" data-aos="fade-up" data-aos-duration="1000">LEARN</button>
 		</div>
 	</div>
 	
@@ -324,15 +324,15 @@
 	
 	<section class="contactform">
 		<form>
-		  <div class="form-group" data-aos="fade-right" data-aos-duration="1000">
+		  <div class="form-group">
 		    <label for="formGroupExampleInput">Your Name(Required)</label>
 		    <input type="text" class="form-control" id="formGroupNameInput" maxlength="50">
 		  </div>
-		  <div class="form-group" data-aos="fade-right" data-aos-duration="1200">
+		  <div class="form-group">
 		    <label for="formGroupExampleInput2">Your Email(Required)</label>
 		    <input type="email" class="form-control" id="formGroupEmailInput2" maxlength="50">
 		  </div>
-		  <div class="form-group" data-aos="fade-right" data-aos-duration="1400">
+		  <div class="form-group">
 		    <label for="formGroupExampleInput2">Your Message</label>
 		    <input type="textfield" class="form-control" id="formGroupMessageInput2" maxlength="150">
 		  </div>
