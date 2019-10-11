@@ -11,12 +11,39 @@
     if(isset($_POST['createItem'])){
         $title = $_POST['productTitle'];
         $img = $_POST['productImg'];
-        $sql = "INSERT INTO products (title, img) VALUES ('$title', '$img')";
-        if ($conn->query($sql) === TRUE) {
+        $sqlInsert = "INSERT INTO products (title, img) VALUES ('$title', '$img')";
+        if ($conn->query($sqlInsert) === TRUE) {
             echo "New record created successfully";
             header('Location: index.php');
         } else {
-            echo "Error: " . $sql . "<br>" . $conn->error;
+            echo "Error: " . $sqlInsert . "<br>" . $conn->error;
         }
     }
+
+    if (isset($_POST['action']) && $_POST['id']) {
+        if ($_POST['action'] == 'Remove') {
+            $id = $_POST['id'];
+            $sqlDelete = "DELETE FROM products WHERE id = '$id'";
+            if ($conn->query($sqlDelete) === TRUE) {
+                echo "Record deleteded successfully";
+                header('Location: index.php');
+            } else {
+                echo "Error: " . $sqlDelete . "<br>" . $conn->error;
+            }
+        }
+    }
+
+    if(isset($_POST['updateItem']) && $_GET['id']){
+        $id = $_GET['id'];
+        $title = $_POST['updateProductTitle'];
+        $img = $_POST['updateProductImg'];
+        $sqlUpdate = "UPDATE products SET img = '$img', title = '$title' WHERE id = '$id'";
+        if ($conn->query($sqlUpdate) === TRUE) {
+            echo "Record updated successfully";
+            header('Location: index.php');
+        } else {
+            echo "Error: " . $sqlUpdate . "<br>" . $conn->error;
+        }
+    }
+    
 ?>

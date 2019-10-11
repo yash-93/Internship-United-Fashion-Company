@@ -3,6 +3,15 @@
     if(!isset($_SESSION['user'])){
         header('Location: index.php');
     }
+
+    $servername = "localhost";
+    $username = "root";
+    $password = "root";
+    $dbname = "ufc_test";
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
 ?>
 
 <!DOCTYPE html>
@@ -58,13 +67,13 @@
 
     <!-- Sidebar -->
     <ul class="sidebar navbar-nav">
-      <li class="nav-item">
+      <li class="nav-item active">
         <a class="nav-link" href="index.php">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span>
         </a>
       </li>
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="adminBanner.php">
           <i class="fas fa-fw fa-image"></i>
           <span>Banner</span>
@@ -78,13 +87,56 @@
         <!-- Breadcrumbs-->
         <ol class="breadcrumb">
           <li class="breadcrumb-item">
-            <a href="index.php">Banner</a>
+            <a href="index.php">Dashboard</a>
           </li>
-          <li class="breadcrumb-item active">Overview</li>
+          <li class="breadcrumb-item active">Product Edit</li>
         </ol>
+        <?php
+            if(isset($_POST['action'])){
+                $id = $_POST['id'];
+                $title = "";
+                $img = "";
+                $sql = "SELECT * FROM products WHERE id = '$id'";
+                $result = $conn->query($sql);
+                if ($result->num_rows == 1) {
+                    $row = $result->fetch_assoc();
+                    $title = $row['title'];
+                    $img = $row['img'];
+                }
+            }
+        ?>
+        <!-- Update Form -->
+        <form action="adminActions.php?id=<?php echo $id; ?>" method="POST">
+          <div class="form-group">
+            <div class="form-label-group">
+              <input value="<?php echo $title ?>" name="updateProductTitle" type="text" id="updateProductTitle" class="form-control" placeholder="Title" required="required" autofocus>
+              <label for="updateProductTitle">Title</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-label-group">
+              <input value="<?php echo $img ?>" name="updateProductImg" type="text" id="updateProductImg" class="form-control" placeholder="Image" required="required">
+              <label for="updateProductImg">Image</label>
+            </div>
+          </div>
+          <button onclick="window.location.href='index.php'" class="btn btn-secondary" type="button">Cancel</button>
+          <input name="updateItem" class="btn btn-success" type="submit" value="Change"></input>
+        </form>
 
-        <!-- Change Banner -->
-        
+        <?php
+            if(isset($_POST['updateItem'])){
+                $title = $_POST['updateProductTitle'];
+                $img = $_POST['updateProductImg'];
+                $sqlUpdate = "UPDATE products SET img = '$img', title = '$title' WHERE id = '$id'";
+                if ($conn->query($sqlUpdate) === TRUE) {
+                    echo "Record updated successfully";
+                    header('Location: index.php');
+                } else {
+                    echo "Error: " . $sqlUpdate . "<br>" . $conn->error;
+                }
+            }
+        ?>
+
         
       <!-- /.container-fluid -->
 

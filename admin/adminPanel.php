@@ -102,7 +102,6 @@
                     <th>Title</th>
                     <th>Image</th>
                     <th>Action</th>
-                    <th></th>
                   </tr>
                 </thead>
                 <tfoot>
@@ -110,7 +109,6 @@
                     <th>Title</th>
                     <th>Image</th>
                     <th>Action</th>
-                    <th></th>
                   </tr>
                 </tfoot>
                 <tbody>
@@ -119,7 +117,6 @@
                     $username = "root";
                     $password = "root";
                     $dbname = "ufc_test";
-                    $message = "";
                 
                     $conn = new mysqli($servername, $username, $password, $dbname);
                 
@@ -131,11 +128,24 @@
                           echo "<tr>
                                   <td>" . $row["title"] . "</td>
                                   <td> <img src=\" " . $row["img"] . " \" style=\"height: 10vh\"></td>
-                                  <td><button name=\"remove\" onclick=\"window.location.href='adminActions.php'\" class=\"btn btn-danger\">Remove</button><br><br><button name=\"edit\" class=\"btn btn-primary\">Edit</button></td>
+                                  <td>
+                                  <form method=\"POST\" action=\"adminActions.php\">
+                                    <input type=\"submit\" value=\"Remove\" name=\"action\" class=\"btn btn-danger\"></input>
+                                    <br><br>
+                                    <input type=\"hidden\" name=\"id\" value=".$row['id']."\"/>
+                                  </form>
+
+                                  <form method=\"POST\" action=\"updateProducts.php\">
+                                    <input type=\"submit\" value=\"Edit\" name=\"action\" class=\"btn btn-primary\"></input>
+                                    <br><br>
+                                    <input type=\"hidden\" name=\"id\" value=".$row['id']."\"/>
+                                  </form>
+                                  </td>
                                 </tr>";
                       }
                     }
                   ?>
+                  <!-- data-toggle=\"modal\" data-target=\"#updateItemModal\" -->
                 </tbody>
               </table>
             </div>
@@ -198,7 +208,7 @@
           <form action="adminActions.php" method="POST">
           <div class="form-group">
             <div class="form-label-group">
-              <input name="productTitle" type="text" id="productTitle" class="form-control" placeholder="Title" required="required" autofocus="autofocus">
+              <input name="productTitle" type="text" id="productTitle" class="form-control" placeholder="Title" required="required" autofocus>
               <label for="productTitle">Title</label>
             </div>
           </div>
@@ -217,6 +227,8 @@
       </div>
     </div>
   </div>
+
+  <!-- Update Product Modal-->
 
   <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>
