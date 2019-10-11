@@ -48,6 +48,21 @@
     if (isset($_POST['action']) && $_POST['id']) {
         if ($_POST['action'] == 'Remove') {
             $id = $_POST['id'];
+            $sql = "SELECT img FROM products WHERE id = '$id'";
+            $result = $conn->query($sql);
+            if($result->num_rows == 1){
+                $row = $result->fetch_assoc();
+                $arr = explode("/",$row['img']);
+                $imgName = $arr[count($arr)-1];
+                if($dirHandle = opendir("img/")){
+                    while(($file = readdir($dirHandle)) !== false){
+                        if($file == $imgName){
+                            unlink('img/'.$imgName);
+                        }
+                    }
+                }   
+            }
+
             $sqlDelete = "DELETE FROM products WHERE id = '$id'";
             if ($conn->query($sqlDelete) === TRUE) {
                 header('Location: index.php');
