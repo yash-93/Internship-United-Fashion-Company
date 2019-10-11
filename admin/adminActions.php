@@ -13,7 +13,6 @@
         $img = $_POST['productImg'];
         $sqlInsert = "INSERT INTO products (title, img) VALUES ('$title', '$img')";
         if ($conn->query($sqlInsert) === TRUE) {
-            echo "New record created successfully";
             header('Location: index.php');
         } else {
             echo "Error: " . $sqlInsert . "<br>" . $conn->error;
@@ -25,7 +24,6 @@
             $id = $_POST['id'];
             $sqlDelete = "DELETE FROM products WHERE id = '$id'";
             if ($conn->query($sqlDelete) === TRUE) {
-                echo "Record deleteded successfully";
                 header('Location: index.php');
             } else {
                 echo "Error: " . $sqlDelete . "<br>" . $conn->error;
@@ -39,7 +37,6 @@
         $img = $_POST['updateProductImg'];
         $sqlUpdate = "UPDATE products SET img = '$img', title = '$title' WHERE id = '$id'";
         if ($conn->query($sqlUpdate) === TRUE) {
-            echo "Record updated successfully";
             header('Location: index.php');
         } else {
             echo "Error: " . $sqlUpdate . "<br>" . $conn->error;
