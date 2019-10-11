@@ -194,7 +194,7 @@
     </div>
   </div>
 
-  <!-- Create Product Modal-->
+  <!-- Create Item Modal-->
   <div class="modal fade" id="createItemModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -205,7 +205,7 @@
           </button>
         </div>
         <div class="modal-body">
-          <form action="adminActions.php" method="POST">
+          <form action="adminActions.php" method="POST"  enctype="multipart/form-data">
           <div class="form-group">
             <div class="form-label-group">
               <input name="productTitle" type="text" id="productTitle" class="form-control" placeholder="Title" required="required" autofocus>
@@ -214,8 +214,7 @@
           </div>
           <div class="form-group">
             <div class="form-label-group">
-              <input name="productImg" type="text" id="productImg" class="form-control" placeholder="Image" required="required">
-              <label for="productImg">Image</label>
+              <input name="productImg" type="file" id="productImg" class="form-control" required="required">
             </div>
           </div>
         </div>
