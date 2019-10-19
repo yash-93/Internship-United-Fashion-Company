@@ -3,19 +3,7 @@
     if(isset($_SESSION['user'])){
         header('Location: adminPanel.php');
     }
-
-	$servername = "localhost";
-	$username = "root";
-	$password = "root";
-	$dbname = "ufc_test";
-    $message = "";
-        $conn = new mysqli($servername, $username, $password, $dbname);
-        //Check connection
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }else{
-            echo ".";
-        }
+    include 'connection.php';
 ?>
 
 <head>

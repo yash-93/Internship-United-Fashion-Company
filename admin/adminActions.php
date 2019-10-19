@@ -1,15 +1,5 @@
 <?php
-    $servername = "localhost";
-    $username = "root";
-    $password = "root";
-    $dbname = "ufc_test";
-    $conn = new mysqli($servername, $username, $password, $dbname);
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-
-    
-
+    include 'connection.php';
     if(isset($_POST['createItem'])){
         $title = $_POST['productTitle'];
         
@@ -71,17 +61,4 @@
             }
         }
     }
-
-    if(isset($_POST['updateItem']) && $_GET['id']){
-        $id = $_GET['id'];
-        $title = $_POST['updateProductTitle'];
-        $img = $_POST['updateProductImg'];
-        $sqlUpdate = "UPDATE products SET img = '$img', title = '$title' WHERE id = '$id'";
-        if ($conn->query($sqlUpdate) === TRUE) {
-            header('Location: index.php');
-        } else {
-            echo "Error: " . $sqlUpdate . "<br>" . $conn->error;
-        }
-    }
-    
 ?>

@@ -3,15 +3,7 @@
     if(!isset($_SESSION['user'])){
         header('Location: index.php');
     }
-
-    $servername = "localhost";
-    $username = "root";
-    $password = "root";
-    $dbname = "ufc_test";
-    $conn = new mysqli($servername, $username, $password, $dbname);
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
+    include 'connection.php';
 ?>
 
 <!DOCTYPE html>
@@ -101,12 +93,11 @@
                 if ($result->num_rows == 1) {
                     $row = $result->fetch_assoc();
                     $title = $row['title'];
-                    $img = $row['img'];
                 }
             }
         ?>
         <!-- Update Form -->
-        <form action="adminActions.php?id=<?php echo $id; ?>" method="POST">
+        <form action="test.php?id=<?php echo $id; ?>" method="POST" enctype="multipart/form-data">
           <div class="form-group">
             <div class="form-label-group">
               <input value="<?php echo $title ?>" name="updateProductTitle" type="text" id="updateProductTitle" class="form-control" placeholder="Title" required="required" autofocus>
@@ -115,8 +106,7 @@
           </div>
           <div class="form-group">
             <div class="form-label-group">
-              <input value="<?php echo $img ?>" name="updateProductImg" type="text" id="updateProductImg" class="form-control" placeholder="Image" required="required">
-              <label for="updateProductImg">Image</label>
+              <input name="updateProductImg" type="file" id="updateProductImg" class="form-control" placeholder="Image" required="required">
             </div>
           </div>
           <button onclick="window.location.href='index.php'" class="btn btn-secondary" type="button">Cancel</button>

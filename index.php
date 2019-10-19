@@ -1,32 +1,17 @@
-<?php 
-	$servername = "localhost";
-	$username = "root";
-	$password = "root";
-	$dbname = "ufc_test";
-
-	// Create connection
-	$conn = new mysqli($servername, $username, $password, $dbname);
-	// Check connection
-	if ($conn->connect_error) {
-	    die("Connection failed: " . $conn->connect_error);
-	} 
-	//$conn->close();
-?>
-
+<?php include 'admin/connection.php'; ?>
 
 <!DOCTYPE html>
 <html>
 <head>
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-	<script src="https://kit.fontawesome.com/0f6669bfbd.js"></script>	
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://kit.fontawesome.com/0f6669bfbd.js"></script>
 	<script type="text/javascript" src="js/csi.min.js"></script>
 </head>
 <body>
@@ -68,7 +53,14 @@
 
 
 <!-- NAVBAR -->
-	<div class="bgimg">
+	<?php
+		$sql = "SELECT * FROM banner";
+		$result = $conn->query($sql);
+		if ($result->num_rows > 0) {
+			$row = $result->fetch_assoc();
+		}
+	?>
+	<div class="bgimg" style="background-image: url(<?php echo "admin/".$row["img"]; ?>);">
 		
 		<nav class="navbar navbar-expand-md fixed-top headersetting" id="header-nav">
 			<div class="container">
@@ -82,10 +74,10 @@
 							<a href="index.php" class="nav-link text-white" >HOME</a>
 						</li>
 						<li class="nav-item">
-							<a href="about.html" class="nav-link text-white" >ABOUT</a>
+							<a href="about.php" class="nav-link text-white" >ABOUT</a>
 						</li>
 						<li class="nav-item">
-							<a href="contactUs.html" class="nav-link text-white" >CONTACT US</a>
+							<a href="contactUs.php" class="nav-link text-white" >CONTACT US</a>
 						</li>
 						<li class="nav-item">
 							<a href="#!" data-toggle="modal" data-target="#exampleModal" class="nav-link text-white" ></a>
@@ -100,7 +92,7 @@
 			<h1 data-aos="zoom-in" data-aos-duration="1000">United Fashion Company is a startup based in Kolkata and having a regional office in Singapore. We are 
 			leading manufacturers and exporters of small leather goods. We customize leather wallets, belts, bags, 
 			shoes based on customer demands. We are looking to expand our business in India and European countries.</h1>
-			<button onclick="window.location.href='contactUs.html'" class="btn btn-outline-light btn-lg text-white" data-aos="fade-up" data-aos-duration="1000">LEARN</button>
+			<button onclick="window.location.href='contactUs.php'" class="btn btn-outline-light btn-lg text-white" data-aos="fade-up" data-aos-duration="1000">LEARN</button>
 		</div>
 	</div>
 	
@@ -130,68 +122,8 @@
 							</div>";
 				}
 			?>
-				<!--<div class="col-lg-3 col-md-3 col-sm-3 d-block m-auto" data-aos="zoom-in-down" data-aos-duration="1000">
-					<div class="imgsetting d-block m-auto bg-white">
-						<i class="far fa-clock fa-lg"></i>
-					</div>
-					<h2> Professional Design </h2>
-					<p> 8 masters with 30+ years experience </p>
-				</div>
-				<div class="col-lg-3 col-md-3 col-sm-3 d-block m-auto" data-aos="zoom-in-down" data-aos-duration="1000">
-					<div class="imgsetting d-block m-auto bg-white">
-						<i class="far fa-gem fa-lg"></i>
-					</div>
-					<h2> High Quality </h2>
-					<p> Delivery products(bags, handbags etc.) pass rate: 98% or more </p>
-				</div>
-				<div class="col-lg-3 col-md-3 col-sm-3 d-block m-auto" data-aos="zoom-in-down" data-aos-duration="1000">
-					<div class="imgsetting d-block m-auto bg-white">
-						<i class="fas fa-shipping-fast fa-lg"></i>
-					</div>
-					<h2> Fast Delivery </h2>
-					<p> Timely rate of sales delivery: 98% or more </p>
-				</div>
-				<div class="col-lg-3 col-md-3 col-sm-3 d-block m-auto" data-aos="zoom-in-down" data-aos-duration="1000">
-					<div class="imgsetting d-block m-auto bg-white">
-						<i class="fas fa-compress fa-lg"></i>
-					</div>
-					<h2> Small Order Acceptable </h2>
-					<p> Small order is accepted, we treat every order well </p>
-				</div>-->
 
 		</div>
-
-		<!--<div class="row rowsetting">
-			<div class="col-lg-3 col-md-3 col-sm-3 d-block m-auto" data-aos="zoom-in-down" data-aos-duration="1000">
-				<div class="imgsetting d-block m-auto bg-white">
-					<i class="fas fa-users fa-lg"></i>
-				</div>
-				<h2> Wonderful Team </h2>
-				<p> Professional sales team to offer fast response and good service </p>
-			</div>
-			<div class="col-lg-3 col-md-3 col-sm-3 d-block m-auto" data-aos="zoom-in-down" data-aos-duration="1000">
-				<div class="imgsetting d-block m-auto bg-white">
-					<i class="far fa-thumbs-up fa-lg"></i>
-				</div>
-				<h2> OEM Acceptable </h2>
-				<p> 4 years OEM experience for 50 clients from US and Europe </p>
-			</div>
-			<div class="col-lg-3 col-md-3 col-sm-3 d-block m-auto" data-aos="zoom-in-down" data-aos-duration="1000">
-				<div class="imgsetting d-block m-auto bg-white">
-					<i class="far fa-clock fa-lg"></i>
-				</div>
-				<h2> Abundant Products </h2>
-				<p> Full product lines of bags items </p>
-			</div>
-			<div class="col-lg-3 col-md-3 col-sm-3 d-block m-auto" data-aos="zoom-in-down" data-aos-duration="1000">
-				<div class="imgsetting d-block m-auto bg-white">
-					<i class="far fa-gem fa-lg"></i>
-				</div>
-				<h2> High Customer Satisfaction </h2>
-				<p> Customer satisfaction is 95%, increasing by 0.5% per year </p>
-			</div>
-		</div>-->
-
 	</section>
 
 <!-- PRODUCTS -->
@@ -212,7 +144,7 @@
 						while ($row = $result->fetch_assoc()) {
 							echo "<div class=\"col-lg-4 col-md-4 col-sm-12 col-10 d-block m-auto\" data-aos=\"flip-left\" data-aos-duration=\"1000\">
 									<div class=\"card\" >
-									<img src=\" " . $row["img"] . " \" style=\"height: 40vh\">
+									<img src=\"admin/" . $row["img"] . "\" style=\"height: 40vh\">
 									<div class=\"card-body\">
 										<h2> " . $row["title"] . "</h2>
 									</div>
@@ -345,6 +277,7 @@
 	<div data-include="footer.html"></div>
 
 	<script type="text/javascript" src="js/script.js"></script>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<script type="text/javascript">
 		AOS.init();
 	</script>

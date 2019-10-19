@@ -3,6 +3,7 @@
     if(!isset($_SESSION['user'])){
         header('Location: index.php');
     }
+    include 'connection.php';
 ?>
 
 <!DOCTYPE html>
@@ -113,21 +114,13 @@
                 </tfoot>
                 <tbody>
                   <?php
-                    $servername = "localhost";
-                    $username = "root";
-                    $password = "root";
-                    $dbname = "ufc_test";
-                
-                    $conn = new mysqli($servername, $username, $password, $dbname);
-                
-                
                     $sql = "SELECT * FROM products";
                     $result = $conn->query($sql);
                     if ($result->num_rows > 0) {
                       while ($row = $result->fetch_assoc()) {
                           echo "<tr>
                                   <td>" . $row["title"] . "</td>
-                                  <td> <img src=\" " . $row["img"] . " \" style=\"height: 10vh\"></td>
+                                  <td> <img src=\"" . $row["img"] . " \" style=\"height: 10vh\"></td>
                                   <td>
                                   <form method=\"POST\" action=\"adminActions.php\">
                                     <input type=\"submit\" value=\"Remove\" name=\"action\" class=\"btn btn-danger\"></input>

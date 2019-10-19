@@ -3,6 +3,7 @@
     if(!isset($_SESSION['user'])){
         header('Location: index.php');
     }
+    include 'connection.php';
 ?>
 
 <!DOCTYPE html>
@@ -78,13 +79,53 @@
         <!-- Breadcrumbs-->
         <ol class="breadcrumb">
           <li class="breadcrumb-item">
-            <a href="index.php">Banner</a>
+            <a href="adminBanner.php">Banner</a>
           </li>
           <li class="breadcrumb-item active">Overview</li>
         </ol>
 
         <!-- Change Banner -->
-        
+
+        <div class="card mb-3">
+          <div class="card-header">
+            <i class="fas fa-fw fa-image"></i>
+            Banner Image</div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                  <tr>
+                    <th>Banner</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tfoot>
+                  <tr>
+                    <th>Banner</th>
+                    <th>Action</th>
+                  </tr>
+                </tfoot>
+                <tbody>
+                  <?php
+                    $sql = "SELECT * FROM banner";
+                    $result = $conn->query($sql);
+                    if ($result->num_rows > 0) {
+                      while ($row = $result->fetch_assoc()) {
+                          echo "<tr>
+                                  <td> <img src=\"" . $row["img"] . "\" style=\"height: 10vh\"></td>
+                                  <td>
+                                    <button name=\"action\" class=\"btn btn-primary\" data-toggle=\"modal\" data-target=\"#changeBannerModal\">Change</input>
+                                  </td>
+                                </tr>";
+                      }
+                    }
+                  ?>
+                  <!-- data-toggle=\"modal\" data-target=\"#updateItemModal\" -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
         
       <!-- /.container-fluid -->
 
@@ -122,6 +163,33 @@
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
           <a class="btn btn-primary" href="adminLogout.php">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Create Item Modal-->
+  <div class="modal fade" id="changeBannerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Upload your banner</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="updateBanner.php" method="POST" enctype="multipart/form-data">
+          <div class="form-group">
+            <div class="form-label-group">
+              <input name="bannerImg" type="file" id="bannerImg" class="form-control" required="required">
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+          <input name="changeBanner" class="btn btn-success" type="submit"></input>
+          </form>
         </div>
       </div>
     </div>
