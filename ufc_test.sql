@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 10, 2019 at 04:16 PM
+-- Generation Time: Oct 20, 2019 at 07:44 AM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.3
 
@@ -44,6 +44,24 @@ INSERT INTO `admins` (`id`, `username`, `password`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `banner`
+--
+
+CREATE TABLE `banner` (
+  `id` int(2) NOT NULL,
+  `img` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `banner`
+--
+
+INSERT INTO `banner` (`id`, `img`) VALUES
+(1, 'img/banner/newww.jpg');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `products`
 --
 
@@ -58,16 +76,19 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `img`, `title`) VALUES
-(1, 'https://isundei.com/wp-content/uploads/2018/02/3-18.jpg', 'BACKPACK'),
-(2, 'https://isundei.com/wp-content/uploads/2019/04/2-8.jpg', 'TRAVEL BAG'),
-(3, 'https://isundei.com/wp-content/uploads/2019/04/cooler-bag-back.jpg', 'COLLER BAG'),
-(4, 'https://isundei.com/wp-content/uploads/2019/04/solar-backpack-side.jpg', 'SOLAR BACKPACK'),
-(5, 'https://isundei.com/wp-content/uploads/2019/04/tool-bag-2.jpg', 'TOOL BAGS'),
-(6, 'https://isundei.com/wp-content/uploads/2019/04/promotional-bag-1.jpg', 'PROMOTIONAL BAGS');
+(3, 'img/pic.png', 'COLLER BAG'),
+(4, 'img/pic.png', 'SOLAR BACKPACK'),
+(20, 'img/newww.jpg', 'logo');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `banner`
+--
+ALTER TABLE `banner`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `products`
@@ -80,10 +101,16 @@ ALTER TABLE `products`
 --
 
 --
+-- AUTO_INCREMENT for table `banner`
+--
+ALTER TABLE `banner`
+  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

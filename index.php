@@ -142,11 +142,12 @@
 
 					if ($result->num_rows > 0) {
 						while ($row = $result->fetch_assoc()) {
+							$id = $row["id"];
 							echo "<div class=\"col-lg-4 col-md-4 col-sm-12 col-10 d-block m-auto\" data-aos=\"flip-left\" data-aos-duration=\"1000\">
 									<div class=\"card\" >
-									<img src=\"admin/" . $row["img"] . "\" style=\"height: 40vh\">
+									<img onclick=\"\" src=\"admin/" . $row["img"] . "\" style=\"height: 40vh\">
 									<div class=\"card-body\">
-										<h2> " . $row["title"] . "</h2>
+										<h2 style=\"cursor: pointer\"> <a style=\"color:black; text-decoration: none\" href=\"productDetails.php?id=".$id."\">". $row["title"] . "</a></h2>
 									</div>
 									</div>
 								</div>";
@@ -213,37 +214,37 @@
 			<hr><hr>
 
 			<div class="row">
-				<div class="col-lg-2 col-md-2 col-sm-12 col-10 d-block m-auto" data-aos="flip-left" data-aos-duration="1000">
+				<div class="col-lg-2 col-md-2 col-sm-12 col-10 d-block m-auto" data-aos="fade-right" data-aos-duration="1000">
 					<div class="card">
 						<img src="https://isundei.com/wp-content/uploads/2018/04/2-4-177x142.jpg">
 					</div>
 				</div>
 
-				<div class="col-lg-2 col-md-2 col-sm-12 col-10 d-block m-auto" data-aos="flip-left" data-aos-duration="1300">
+				<div class="col-lg-2 col-md-2 col-sm-12 col-10 d-block m-auto" data-aos="fade-right" data-aos-duration="1000">
 					<div class="card">
 						<img src="https://isundei.com/wp-content/uploads/2018/04/bluenavy-177x142.jpg">
 					</div>	
 				</div>
 
-				<div class="col-lg-2 col-md-2 col-sm-12 col-10 d-block m-auto" data-aos="flip-left" data-aos-duration="1600">
+				<div class="col-lg-2 col-md-2 col-sm-12 col-10 d-block m-auto" data-aos="fade-right" data-aos-duration="1000">
 					<div class="card">
 						<img src="https://isundei.com/wp-content/uploads/2018/03/display-1-177x142.jpg">
 					</div>	
 				</div>
 
-				<div class="col-lg-2 col-md-2 col-sm-12 col-10 d-block m-auto" data-aos="flip-left" data-aos-duration="1900">
+				<div class="col-lg-2 col-md-2 col-sm-12 col-10 d-block m-auto" data-aos="fade-left" data-aos-duration="1000">
 					<div class="card">
 						<img src="https://isundei.com/wp-content/uploads/2018/02/003-5-177x142.jpg">
 					</div>
 				</div>
 
-				<div class="col-lg-2 col-md-2 col-sm-12 col-10 d-block m-auto" data-aos="flip-left" data-aos-duration="2100">
+				<div class="col-lg-2 col-md-2 col-sm-12 col-10 d-block m-auto" data-aos="fade-left" data-aos-duration="1000">
 					<div class="card">
 						<img src="https://isundei.com/wp-content/uploads/2018/02/002-6-177x142.jpg">
 					</div>	
 				</div>
 
-				<div class="col-lg-2 col-md-2 col-sm-12 col-10 d-block m-auto" data-aos="flip-left" data-aos-duration="2300">
+				<div class="col-lg-2 col-md-2 col-sm-12 col-10 d-block m-auto" data-aos="fade-left" data-aos-duration="1000">
 					<div class="card">
 						<img src="https://isundei.com/wp-content/uploads/2018/02/001-5-177x142.jpg">
 					</div>

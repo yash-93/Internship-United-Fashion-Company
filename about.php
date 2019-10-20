@@ -163,7 +163,7 @@
 	</section>
 
 <!-- Footer -->
-	<div data-include="footer.html"></div>
+	<div data-include="footer.php"></div>
 	<script type="text/javascript" src="js/script.js"></script>
 	<script type="text/javascript">
 		AOS.init();

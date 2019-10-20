@@ -8,6 +8,10 @@
 	text-align: left;
 }
 
+.srow img{
+	width: 100%;
+}
+
 .svnrow{
 	padding-top: 5%;
 	padding-bottom: 5%;

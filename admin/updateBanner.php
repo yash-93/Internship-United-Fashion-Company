@@ -8,7 +8,8 @@
             $file_size = $_FILES['bannerImg']['size'];
             $file_tmp = $_FILES['bannerImg']['tmp_name'];
             $file_type = $_FILES['bannerImg']['type'];
-            $file_ext = strtolower(end(explode('.',$_FILES['bannerImg']['name'])));
+            $var = explode('.',$_FILES['bannerImg']['name']);
+            $file_ext = strtolower(end($var));
             $extensions = array("jpeg","jpg","png");
             $uploadPath = "img/banner/".$file_name;
             if(in_array($file_ext,$extensions)=== false){
@@ -20,7 +21,6 @@
             }
             if(empty($errors)==true) {
                 move_uploaded_file($file_tmp,"img/banner/".$file_name);
-                echo "Success";
              }else{
                 print_r($errors);
              }
@@ -29,8 +29,6 @@
         $sqlInsert = "UPDATE banner SET img = '$uploadPath'";
         if ($conn->query($sqlInsert) === TRUE) {
             header('Location: adminBanner.php');
-        } else {
-            echo "Error: " . $sqlInsert . "<br>" . $conn->error;
         }
     }
 ?>

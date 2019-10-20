@@ -210,6 +210,12 @@
               <input name="productImg" type="file" id="productImg" class="form-control" required="required">
             </div>
           </div>
+          <div class="form-group">
+            <div class="form-label-group">
+              <input name="productDesc" type="text" id="productDesc" class="form-control" placeholder="Description" required="required">
+              <label for="productDesc">Description</label>
+            </div>
+          </div>
         </div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>

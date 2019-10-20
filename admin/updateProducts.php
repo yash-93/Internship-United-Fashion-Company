@@ -97,7 +97,7 @@
             }
         ?>
         <!-- Update Form -->
-        <form action="test.php?id=<?php echo $id; ?>" method="POST" enctype="multipart/form-data">
+        <form action="changeProductDetails.php?id=<?php echo $id; ?>" method="POST" enctype="multipart/form-data">
           <div class="form-group">
             <div class="form-label-group">
               <input value="<?php echo $title ?>" name="updateProductTitle" type="text" id="updateProductTitle" class="form-control" placeholder="Title" required="required" autofocus>
@@ -109,24 +109,15 @@
               <input name="updateProductImg" type="file" id="updateProductImg" class="form-control" placeholder="Image" required="required">
             </div>
           </div>
+          <div class="form-group">
+            <div class="form-label-group">
+              <input name="updateProductDesc" type="text" id="updateProductDesc" class="form-control" placeholder="Description" required="required">
+              <label for="updateProductDesc">Description</label>
+            </div>
+          </div>
           <button onclick="window.location.href='index.php'" class="btn btn-secondary" type="button">Cancel</button>
           <input name="updateItem" class="btn btn-success" type="submit" value="Change"></input>
         </form>
-
-        <?php
-            if(isset($_POST['updateItem'])){
-                $title = $_POST['updateProductTitle'];
-                $img = $_POST['updateProductImg'];
-                $sqlUpdate = "UPDATE products SET img = '$img', title = '$title' WHERE id = '$id'";
-                if ($conn->query($sqlUpdate) === TRUE) {
-                    echo "Record updated successfully";
-                    header('Location: index.php');
-                } else {
-                    echo "Error: " . $sqlUpdate . "<br>" . $conn->error;
-                }
-            }
-        ?>
-
         
       <!-- /.container-fluid -->
 
