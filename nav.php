@@ -18,7 +18,7 @@
 	
 		<nav class="navbar navbar-expand-md fixed-top headersetting" id="header-nav">
 			<div class="container">
-				<a href="index.html" class="navbar-brand"><img src="https://isundei.com/wp-content/uploads/2019/03/website-logo1-2-2.png" id="logo"></a>
+				<a href="index.php" class="navbar-brand"><img src="https://isundei.com/wp-content/uploads/2019/03/website-logo1-2-2.png" id="logo"></a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsenavbar">
 					<span class="navbar-toggler-icon"></span>
 				</button>

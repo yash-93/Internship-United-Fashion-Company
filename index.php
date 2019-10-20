@@ -275,7 +275,7 @@
 
 <!-- FOOTER -->
 
-	<div data-include="footer.html"></div>
+	<div data-include="footer.php"></div>
 
 	<script type="text/javascript" src="js/script.js"></script>
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
