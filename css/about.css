@@ -25,6 +25,10 @@
 	letter-spacing: 1px;
 }
 
+.aboutcompany img{
+	width: 100%;
+}
+
 label{
 	line-height: 32.5px;
 	font-weight: 700;
@@ -70,3 +74,63 @@ ul li:hover{
 .headersetting{
 	background-color: #51636A!important;
 }
+
+#header-nav{
+	width: 100vw;
+}
+
+#header-nav i{
+	color: white;
+}
+
+#header-nav button{
+	background: transparent;
+}
+
+@media (max-width: 309px){
+	
+}
+
+@media (max-width: 376px) and (min-width: 310px){
+	#aboutdata{
+		padding-top: 5%;;
+	}
+
+	.aboutcompany img, .trow label, .fvrow label, form{
+		margin-left: 10%;
+	}
+}
+
+@media (max-width: 411px) and (min-width: 377px){
+	#aboutdata{
+		padding-top: 5%;;
+	}
+
+	.aboutcompany img, .trow label, .fvrow label, form{
+		margin-left: 10%;
+	}
+}
+
+@media (max-width: 575px) and (min-width:412px){
+	#aboutdata{
+		padding-top: 5%;;
+	}
+
+	.aboutcompany img, .trow label, .fvrow label, form{
+		margin-left: 10%;
+	}
+}
+
+@media (max-width: 767px) and (min-width: 576px){
+	#aboutdata{
+		padding-top: 5%;;
+	}
+}
+
+/* @media (max-width: 991px) and (min-width: 768px) {
+	
+}
+
+@media (max-width: 1199px) and (min-width: 992px) {
+	
+} */

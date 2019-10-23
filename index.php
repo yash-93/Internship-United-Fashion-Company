@@ -8,49 +8,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-	<script src="https://kit.fontawesome.com/0f6669bfbd.js"></script>
 	<script type="text/javascript" src="js/csi.min.js"></script>
 </head>
 <body>
-
-	
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      	<div class="modal-header">
-        	<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          	<span aria-hidden="true">&times;</span>
-        	</button>
-      	</div>
-      	<div class="modal-body">
-        	<div class="container-fluid">
-		    	<form>
-				  <div class="form-group">
-				    <label for="formGroupExampleInput">Username or Email</label>
-				    <input type="text" class="form-control" id="formGroupNameInput" maxlength="50">
-				  </div>
-				  <div class="form-group">
-				    <label for="formGroupExampleInput2">Password</label>
-				    <input type="email" class="form-control" id="formGroupEmailInput2" maxlength="50">
-				  </div>
-				   <button type="submit" class="btn btn-warning text-white ml-auto">LOG IN</button>
-				</form>
-  			</div>
-     	</div>
-	     <div class="modal-footer">
-	       	<label>Forgot password?</label>
-	     </div>
-    </div>
-  </div>
-</div>
-
-
 
 <!-- NAVBAR -->
 	<?php
@@ -66,7 +26,7 @@
 			<div class="container">
 				<a href="index.php" class="navbar-brand" data-aos="fade-down-right" data-aos-duration="1000"><img src="img/logo.png" id="logo"></a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsenavbar">
-					<span class="navbar-toggler-icon"></span>
+					<span class="navbar-toggler-icon"><i class="fas fa-bars fa-2x"></i></span>
 				</button>
 				<div class="collapse navbar-collapse text-center" id="collapsenavbar" >
 					<ul class="navbar-nav ml-auto" data-aos="fade-down-left" data-aos-duration="1000">
@@ -214,37 +174,37 @@
 			<hr><hr>
 
 			<div class="row">
-				<div class="col-lg-2 col-md-2 col-sm-12 col-10 d-block m-auto" data-aos="fade-right" data-aos-duration="1000">
+				<div class="col-lg-2 col-md-2 col-sm-12 col-10 d-block m-auto" data-aos="flip-left" data-aos-duration="1000">
 					<div class="card">
 						<img src="https://isundei.com/wp-content/uploads/2018/04/2-4-177x142.jpg">
 					</div>
 				</div>
 
-				<div class="col-lg-2 col-md-2 col-sm-12 col-10 d-block m-auto" data-aos="fade-right" data-aos-duration="1000">
+				<div class="col-lg-2 col-md-2 col-sm-12 col-10 d-block m-auto" data-aos="flip-left" data-aos-duration="1000">
 					<div class="card">
 						<img src="https://isundei.com/wp-content/uploads/2018/04/bluenavy-177x142.jpg">
 					</div>	
 				</div>
 
-				<div class="col-lg-2 col-md-2 col-sm-12 col-10 d-block m-auto" data-aos="fade-right" data-aos-duration="1000">
+				<div class="col-lg-2 col-md-2 col-sm-12 col-10 d-block m-auto" data-aos="flip-left" data-aos-duration="1000">
 					<div class="card">
 						<img src="https://isundei.com/wp-content/uploads/2018/03/display-1-177x142.jpg">
 					</div>	
 				</div>
 
-				<div class="col-lg-2 col-md-2 col-sm-12 col-10 d-block m-auto" data-aos="fade-left" data-aos-duration="1000">
+				<div class="col-lg-2 col-md-2 col-sm-12 col-10 d-block m-auto" data-aos="flip-left" data-aos-duration="1000">
 					<div class="card">
 						<img src="https://isundei.com/wp-content/uploads/2018/02/003-5-177x142.jpg">
 					</div>
 				</div>
 
-				<div class="col-lg-2 col-md-2 col-sm-12 col-10 d-block m-auto" data-aos="fade-left" data-aos-duration="1000">
+				<div class="col-lg-2 col-md-2 col-sm-12 col-10 d-block m-auto" data-aos="flip-left" data-aos-duration="1000">
 					<div class="card">
 						<img src="https://isundei.com/wp-content/uploads/2018/02/002-6-177x142.jpg">
 					</div>	
 				</div>
 
-				<div class="col-lg-2 col-md-2 col-sm-12 col-10 d-block m-auto" data-aos="fade-left" data-aos-duration="1000">
+				<div class="col-lg-2 col-md-2 col-sm-12 col-10 d-block m-auto" data-aos="flip-left" data-aos-duration="1000">
 					<div class="card">
 						<img src="https://isundei.com/wp-content/uploads/2018/02/001-5-177x142.jpg">
 					</div>
@@ -278,6 +238,10 @@
 	<div data-include="footer.php"></div>
 
 	<script type="text/javascript" src="js/script.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script src="https://kit.fontawesome.com/0f6669bfbd.js"></script>
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<script type="text/javascript">
 		AOS.init();

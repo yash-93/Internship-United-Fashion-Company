@@ -9,7 +9,6 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<script src="https://kit.fontawesome.com/0f6669bfbd.js"></script>	
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script type="text/javascript" src="js/csi.min.js"></script>
@@ -21,7 +20,7 @@
 			<div class="container">
 				<a href="index.php" class="navbar-brand" data-aos="fade-down"><img src="img/logo.png" id="logo"></a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsenavbar">
-					<span class="navbar-toggler-icon"></span>
+					<span class="navbar-toggler-icon"><i class="fas fa-bars fa-2x"></i></span>
 				</button>
 				<div class="collapse navbar-collapse text-center" id="collapsenavbar" data-aos="fade-down">
 					<ul class="navbar-nav ml-auto">
@@ -29,17 +28,17 @@
 							<a href="index.php" class="nav-link text-white" id="navlink1">HOME</a>
 						</li>
 						<li class="nav-item">
-							<a href="about.html" class="nav-link text-white" id="navlink2">ABOUT</a>
+							<a href="about.php" class="nav-link text-white" id="navlink2">ABOUT</a>
 						</li>
 						<li class="nav-item">
-							<a href="contactUs.html" class="nav-link text-white" id="navlink3">CONTACT US</a>
+							<a href="contactUs.php" class="nav-link text-white" id="navlink3">CONTACT US</a>
 						</li>
 					</ul>		
 				</div>
 			</div>
 		</nav>
 
-<!-- Background -->
+<!-- About -->
 	<section class="container text-center aboutcompany">
 		<div class="row frow">
 			<div class="col-lg-3 col-md-3 col-sm-12 col-10 d-block m-auto">
@@ -55,10 +54,10 @@
 		<div class="row srow">
 			<div class="col-lg-4 col-md-4 col-sm-12 col-10 d-block mr-auto">
 				<div data-aos="fade-right" data-aos-duration="500">
-					<img src="https://isundei.com/wp-content/uploads/2018/02/001-6.jpg">
+					<img src="admin/img/newww.jpg">
 				</div>
 			</div>
-			<div class="col-lg-6 col-md-6 col-sm-12 col-10 d-block m-auto" data-aos="fade-left" data-aos-duration="500">
+			<div class="col-lg-6 col-md-6 col-sm-12 col-10 d-block m-auto" id="aboutdata" data-aos="fade-left" data-aos-duration="500">
 				<label>Our mission: Make bags in the same quality as Louis Vuitton bags</label>
 				<label>Our goal: To provide a reliable supply platform for small and medium dealers</label>
 				<p>United Fashion Company is a startup based in Kolkata and having a regional office in Singapore. We are 
@@ -78,10 +77,10 @@
 		<div class="row frrow">
 			<div class="col-lg-4 col-md-4 col-sm-12 col-10 d-block mr-auto">
 				<div data-aos="fade-right" data-aos-duration="500">
-					<img src="https://isundei.com/wp-content/uploads/2018/02/002-7.jpg">
+					<img src="admin/img/newww.jpg">
 				</div>
 			</div>
-			<div class="col-lg-6 col-md-6 col-sm-12 col-10 d-block m-auto" data-aos="fade-left" data-aos-duration="500">
+			<div class="col-lg-6 col-md-6 col-sm-12 col-10 d-block m-auto" id="aboutdata" data-aos="fade-left" data-aos-duration="500">
 				<ul>
 					<li>Laptop bags for professionals</li><br>
 					<li>Mini-backpack for college students</li><br>
@@ -102,10 +101,10 @@
 		<div class="row sxrow">
 			<div class="col-lg-4 col-md-4 col-sm-12 col-10 d-block mr-auto">
 				<div data-aos="fade-right" data-aos-duration="500">
-					<img src="https://isundei.com/wp-content/uploads/2018/02/002-7.jpg">
+					<img src="admin/img/newww.jpg">
 				</div>
 			</div>
-			<div class="col-lg-6 col-md-6 col-sm-12 col-10 d-block m-auto" data-aos="fade-left" data-aos-duration="500">
+			<div class="col-lg-6 col-md-6 col-sm-12 col-10 d-block m-auto" id="aboutdata" data-aos="fade-left" data-aos-duration="500">
 				<ul>
 					<li>Fast response  (Fast):All inquiries replied to within 8 hours and take small orders to meet needs of small and medium dealers</li><br>
 					<li>Leading Quality of Service (Best): The general manager is personally responsible for marketing to ensure quality of service. Service has always been Minray people’s principle</li><br>
@@ -120,6 +119,7 @@
 		</div>
 	</section>
 	
+<!-- Contact Form -->
 	<section class="bg-light">
 		<div class="container contact">
 			<div class="row">
@@ -165,6 +165,7 @@
 <!-- Footer -->
 	<div data-include="footer.php"></div>
 	<script type="text/javascript" src="js/script.js"></script>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<script type="text/javascript">
 		AOS.init();
 	</script>

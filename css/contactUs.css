@@ -4,6 +4,20 @@
 	background-attachment: fixed;
 	width: 100%;
 	height: 70vh;
+	overflow: hidden;
+}
+
+.contactUs i{
+	color: white;
+}
+
+.contactUs i:hover{
+	cursor: pointer;
+}
+
+.contactUs button{
+	background: transparent;
+	opacity: 1!important;
 }
 
 .contactSetting{
@@ -57,4 +71,166 @@
 
 form label{
 	color: #59516A;
+}
+
+@media (max-width: 310px) and (min-width: 240px){
+	#logo{
+		height: 10vh!important;
+	}
+
+	.rowsetting>div{
+		padding-left: 18%!important;
+	}
+
+	.address{
+		height: 80vh!important;
+	}
+
+	.businesshours{
+		height: 58vh!important;
+	}
+
+	.phone{
+		height: 70vh!important;
+	}
+
+	.email{
+		height: 35vh!important;
+	}
+
+	.contactSetting h1{
+		font-size: 30px;
+		font-weight: bold;
+		padding-top: 20vh;
+	}
+}
+
+@media (max-width: 376px) and (min-width: 311px){
+	.rowsetting>div{
+		padding-left: 18%!important;
+	}
+
+	.address{
+		height: 61vh!important;
+	}
+
+	.businesshours{
+		height: 45vh!important;
+	}
+
+	.phone{
+		height: 55vh!important;
+	}
+
+	.email{
+		height: 30vh!important;
+	}
+
+	.contactSetting h1{
+		font-size: 30px;
+		font-weight: bold;
+		padding-top: 20vh;
+	}
+}
+
+@media (max-width: 411px) and (min-width: 377px){
+	.rowsetting>div{
+		padding-left: 18%!important;
+	}
+
+	.address{
+		height: 44vh!important;
+	}
+
+	.businesshours{
+		height: 34vh!important;
+	}
+
+	.phone{
+		height: 44vh!important;
+	}
+
+	.email{
+		height: 30vh!important;
+	}
+
+	.contactSetting h1{
+		padding-top: 20vh;
+		font-size: 45px;
+	}
+}
+
+@media (max-width: 575px) and (min-width:412px){
+	.rowsetting>div{
+		padding-left: 18%!important;
+	}
+
+	.address{
+		height: 50vh!important;
+	}
+
+	.businesshours{
+		height: 40vh!important;
+	}
+
+	.phone{
+		height: 45vh!important;
+	}
+
+	.email{
+		height: 30vh!important;
+	}
+
+	.contactSetting h1{
+		padding-top: 15vh;
+		font-size: 45px;
+	}
+}
+
+@media (max-width: 767px) and (min-width: 576px){
+	#logo{
+		height: 10vh!important;
+	}
+
+	.address{
+		height: 68vh!important;
+	}
+
+	.businesshours{
+		height: 62vh!important;
+	}
+
+	.phone{
+		height: 62vh!important;
+	}
+
+	.email{
+		height: 45vh!important;
+	}
+	.contactSetting h1{
+		padding-top: 5vh;
+		font-size: 40px;
+	}
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+	.rowsetting>div{
+		height: 80vh!important;
+	}
+
+	.contactSetting h1{
+		padding-top: 5vh;
+		font-size: 55px;
+	}
+}
+
+@media (max-width: 1199px) and (min-width: 992px) {
+	.rowsetting>div{
+		height: 50vh!important;
+	}
+
+	.contactSetting h1{
+		padding-top: -vh;
+		font-size: 65px;
+	}
 }
