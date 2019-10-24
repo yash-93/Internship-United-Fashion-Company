@@ -15,7 +15,7 @@
 	<div class="contactUs">
 		<!--<div data-include="nav.php"></div>-->
 		<nav class="navbar navbar-expand-md fixed-top headersetting" id="header-nav">
-			<div class="container">
+			<div class="container" id="navbarbackgroundcontact">
 				<a href="index.php" class="navbar-brand"><img src="img/logo.png" id="logo"></a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsenavbar">
 				<span class="navbar-toggler-icon"><i class="fas fa-bars fa-2x"></i></span>

@@ -4,7 +4,7 @@ window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
   if(x1.matches){
-    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
       document.getElementById("header-nav").style.fontSize = "13px";
       document.getElementById("header-nav").style.height = "15vh";
       document.getElementById("header-nav").classList.add("navvisible");
@@ -18,7 +18,7 @@ function scrollFunction() {
       document.getElementById("hide").classList.remove("hide");
     }
   }if(x2.matches){
-    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
       document.getElementById("header-nav").style.fontSize = "13px";
       document.getElementById("header-nav").style.height = "15vh";
       document.getElementById("header-nav").classList.add("navvisible");
@@ -32,7 +32,7 @@ function scrollFunction() {
       document.getElementById("hide").classList.remove("hide");
     }
   }else{
-    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
       document.getElementById("header-nav").style.fontSize = "13px";
       document.getElementById("header-nav").style.height = "10vh";
       document.getElementById("header-nav").classList.add("navvisible");
@@ -46,4 +46,9 @@ function scrollFunction() {
       document.getElementById("hide").classList.remove("hide");
     }
   }
+}
+
+
+function addNavbarBackgroundColor(){
+  document.getElementById("navbarbackgroundabout").style.background = "#50636a";
 }

@@ -103,6 +103,10 @@ form label{
 		font-weight: bold;
 		padding-top: 20vh;
 	}
+
+	#navbarbackgroundcontact, #header-nav{
+		background: #50636a;
+	}
 }
 
 @media (max-width: 376px) and (min-width: 311px){
@@ -131,6 +135,10 @@ form label{
 		font-weight: bold;
 		padding-top: 20vh;
 	}
+
+	#navbarbackgroundcontact, #header-nav{
+		background: #50636a;
+	}
 }
 
 @media (max-width: 411px) and (min-width: 377px){
@@ -157,6 +165,10 @@ form label{
 	.contactSetting h1{
 		padding-top: 20vh;
 		font-size: 45px;
+	}
+
+	#navbarbackgroundcontact, #header-nav{
+		background: #50636a;
 	}
 }
 
@@ -185,6 +197,10 @@ form label{
 		padding-top: 15vh;
 		font-size: 45px;
 	}
+
+	#navbarbackgroundcontact, #header-nav{
+		background: #50636a;
+	}
 }
 
 @media (max-width: 767px) and (min-width: 576px){
@@ -208,8 +224,12 @@ form label{
 		height: 45vh!important;
 	}
 	.contactSetting h1{
-		padding-top: 5vh;
+		padding-top: 12.5vh;
 		font-size: 40px;
+	}
+
+	#navbarbackgroundcontact, #header-nav{
+		background: #50636a;
 	}
 }
 

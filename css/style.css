@@ -224,6 +224,10 @@ button:hover{
 		font-size:17.5px;
 		font-weight: bold;
 	}
+
+	#navbarbackgroundhome, #header-nav{
+		background: #50636a;
+	}
 }
 
 @media (max-width: 376px) and (min-width: 311px){
@@ -239,6 +243,10 @@ button:hover{
 	.headerset h1{
 		font-size:17.5px;
 		font-weight: bold;
+	}
+
+	#navbarbackgroundhome, #header-nav{
+		background: #50636a;
 	}
 }
 
@@ -257,6 +265,10 @@ button:hover{
 		font-weight: bold;
 		letter-spacing: 1px
 	}
+
+	#navbarbackgroundhome, #header-nav{
+		background: #50636a;
+	}
 }
 
 @media (max-width: 575px) and (min-width:412px){
@@ -274,6 +286,10 @@ button:hover{
 		font-weight: bold;
 		letter-spacing: 1px
 	}
+
+	#navbarbackgroundhome, #header-nav{
+		background: #50636a;
+	}
 }
 
 @media (max-width: 767px) and (min-width: 576px){
@@ -290,6 +306,10 @@ button:hover{
 		font-size: 25px;
 		font-weight: bold;
 		letter-spacing: 1px
+	}
+
+	#navbarbackgroundhome, #header-nav{
+		background: #50636a;
 	}
 }
 

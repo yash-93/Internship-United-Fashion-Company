@@ -17,9 +17,9 @@
 
 <!-- Header -->
 		<nav class="navbar navbar-expand-md fixed-top headersetting" id="header-nav">
-			<div class="container">
+			<div class="container" id="navbarbackgroundabout">
 				<a href="index.php" class="navbar-brand" data-aos="fade-down"><img src="img/logo.png" id="logo"></a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsenavbar">
+				<button onclick="addNavbarBackgroundColor()" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsenavbar">
 					<span class="navbar-toggler-icon"><i class="fas fa-bars fa-2x"></i></span>
 				</button>
 				<div class="collapse navbar-collapse text-center" id="collapsenavbar" data-aos="fade-down">

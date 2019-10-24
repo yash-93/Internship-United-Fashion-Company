@@ -23,7 +23,7 @@
 	<div class="bgimg" style="background-image: url(<?php echo "admin/".$row["img"]; ?>);">
 		
 		<nav class="navbar navbar-expand-md fixed-top headersetting" id="header-nav">
-			<div class="container">
+			<div class="container" id="navbarbackgroundhome">
 				<a href="index.php" class="navbar-brand" data-aos="fade-down-right" data-aos-duration="1000"><img src="img/logo.png" id="logo"></a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsenavbar">
 					<span class="navbar-toggler-icon"><i class="fas fa-bars fa-2x"></i></span>

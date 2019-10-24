@@ -125,6 +125,10 @@ ul li:hover{
 	#aboutdata{
 		padding-top: 5%;;
 	}
+
+	#navbarbackgroundabout{
+		background: #50636a!important;
+	}
 }
 
 /* @media (max-width: 991px) and (min-width: 768px) {
