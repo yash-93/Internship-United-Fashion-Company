@@ -1,6 +1,10 @@
+#header-nav{
+	height: 10%;
+}
+
 .frow{
 	margin-top: 12.5%;
-	padding-top: 5%
+	padding-top: 15%
 }
 
 .srow, .trow, .frrow, .fvrow, .sxrow{
@@ -43,8 +47,6 @@ p{
 
 ul li{
 	font-size: 15px;
-	font-weight: lighter;
-	color: #50586b
 }
 
 
@@ -88,10 +90,16 @@ ul li:hover{
 }
 
 @media (max-width: 309px){
-	
+	#header-nav{
+		height: 12.5%;
+	}
 }
 
 @media (max-width: 376px) and (min-width: 310px){
+	#header-nav{
+		height: 12.5%;
+	}
+
 	#aboutdata{
 		padding-top: 5%;;
 	}
@@ -102,6 +110,10 @@ ul li:hover{
 }
 
 @media (max-width: 411px) and (min-width: 377px){
+	#header-nav{
+		height: 12.5%;
+	}
+	
 	#aboutdata{
 		padding-top: 5%;;
 	}

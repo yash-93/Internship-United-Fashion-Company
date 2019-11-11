@@ -235,7 +235,7 @@ form label{
 
 @media (max-width: 991px) and (min-width: 768px) {
 	.rowsetting>div{
-		height: 80vh!important;
+		height: 80vh;
 	}
 
 	.contactSetting h1{
@@ -246,7 +246,7 @@ form label{
 
 @media (max-width: 1199px) and (min-width: 992px) {
 	.rowsetting>div{
-		height: 50vh!important;
+		height: 50vh;
 	}
 
 	.contactSetting h1{

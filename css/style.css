@@ -28,7 +28,7 @@ li a{
 }
 
 .headerset{
-	padding-top: 20%;
+	padding-top: 35vh;
 	box-sizing: border-box;
 	text-align: justify;
 }
@@ -114,9 +114,7 @@ hr{
 	margin-top: 40%;
 }
 
-.rowsetting>div{
-	height: 30vh
-}
+
 
 .products{
 	width: 100%;
@@ -129,10 +127,13 @@ hr{
 	color: #50586b;
 }
 
+.products .card img{
+	height: 20vh;
+}
+
 .card{
 	margin-top: 10%;
 }
-
 
 
 
@@ -141,7 +142,7 @@ hr{
 }
 
 .slider .carousel-item img{
-	height: 60vh !important;
+	height: fit-content;
 }
 
 
@@ -158,7 +159,7 @@ hr{
 }
 
 .hotsellingproducts img{
-	height: 20vh;
+	height: fit-content;
 }
 
 .hotsellingproducts .row{
@@ -228,6 +229,10 @@ button:hover{
 	#navbarbackgroundhome, #header-nav{
 		background: #50636a;
 	}
+
+	.slider .carousel-item img{
+		height: 35vh !important;
+	}
 }
 
 @media (max-width: 376px) and (min-width: 311px){
@@ -247,6 +252,10 @@ button:hover{
 
 	#navbarbackgroundhome, #header-nav{
 		background: #50636a;
+	}
+
+	.slider .carousel-item img{
+		height: 35vh !important;
 	}
 }
 
@@ -268,6 +277,10 @@ button:hover{
 
 	#navbarbackgroundhome, #header-nav{
 		background: #50636a;
+	}
+
+	.slider .carousel-item img{
+		height: 35vh !important;
 	}
 }
 

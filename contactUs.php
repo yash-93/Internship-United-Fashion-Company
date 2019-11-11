@@ -37,7 +37,7 @@
 				</div>
 		</nav>
 
-		<div class="container text-white contactSetting" id="hide" data-aos="fade-right">
+		<div class="container text-white contactSetting" id="hide" data-aos="fade-right" style="padding-top: 30vh">
 			<h1>Contact Us</h1>
 			<p>Get In Touch With Our Team</p>
 		</div>
@@ -48,7 +48,7 @@
 
 	<section class="container text-center contactS1">
 		<div class="row rowsetting">
-			<div class="address col-lg-3 col-md-3 col-sm-12 col-10">
+			<div class="address col-lg-3 col-md-3 col-sm-12 col-10" style="height: fit-content">
 				<div class="d-block m-auto imgsetting" data-aos="flip-down" data-aos-duration="1000">
 					<i class="fas fa-home fa-3x text-white"></i>
 				</div>
@@ -59,7 +59,7 @@
 					</span>
 				</div>
 			</div>
-			<div class=" businesshours col-lg-3 col-md-3 col-sm-12 col-10">
+			<div class=" businesshours col-lg-3 col-md-3 col-sm-12 col-10" style="height: fit-content">
 				<div class="d-block m-auto imgsetting" data-aos="flip-down" data-aos-duration="1000">
 					<i class="fas fa-clock fa-3x text-white"></i>
 				</div>
@@ -71,7 +71,7 @@
 					</span>
 				</div>
 			</div>
-			<div class="phone col-lg-3 col-md-3 col-sm-12 col-10">
+			<div class="phone col-lg-3 col-md-3 col-sm-12 col-10" style="height: fit-content">
 				<div class="d-block m-auto imgsetting" data-aos="flip-down" data-aos-duration="1000">
 					<i class="fas fa-phone fa-3x text-white"></i>
 				</div>
@@ -83,7 +83,7 @@
 					</span>
 				</div>
 			</div>
-			<div class="email col-lg-3 col-md-3 col-sm-12 col-10">
+			<div class="email col-lg-3 col-md-3 col-sm-12 col-10" style="height: fit-content">
 				<div class="d-block m-auto imgsetting" data-aos="flip-down" data-aos-duration="1000">
 					<i class="fas fa-envelope fa-3x text-white"></i>
 				</div>

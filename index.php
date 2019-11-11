@@ -5,7 +5,7 @@
 <head>
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<script type="text/javascript" src="js/csi.min.js"></script>
@@ -105,7 +105,7 @@
 							$id = $row["id"];
 							echo "<div class=\"col-lg-4 col-md-4 col-sm-12 col-10 d-block m-auto\" data-aos=\"flip-left\" data-aos-duration=\"1000\">
 									<div class=\"card\" >
-									<img onclick=\"\" src=\"admin/" . $row["img"] . "\" style=\"height: 40vh\">
+									<img src=\"admin/" . $row["img"] . "\">
 									<div class=\"card-body\">
 										<h2 style=\"cursor: pointer\"> <a style=\"color:black; text-decoration: none\" href=\"productDetails.php?id=".$id."\">". $row["title"] . "</a></h2>
 									</div>
